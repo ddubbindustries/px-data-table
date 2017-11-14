@@ -34,11 +34,12 @@
               class="px-dropdown-content"
               selected="{{cellValue}}"
               select-by="val"
-              display-value="{{cellDisplayValue}}"
+              display-value="Select..."
               on-px-dropdown-selection-changed="saveCell"
               allow-outside-scroll="true"
-              button-style="bare"
+              button-style="primary"
               items="{{dropdownItems}}"
+              search-mode
               disable-clear>
             </px-dropdown>
           </span>
