@@ -596,7 +596,9 @@
         return it._selected === true;
       });
 
-      this._updateSelectionHeader();
+      if (this.selectable) {
+        this._updateSelectionHeader();
+      }
 
       this._filterSortAndUpdateDisplayedTable();
 
