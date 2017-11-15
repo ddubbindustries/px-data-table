@@ -141,12 +141,32 @@ Click [here](https://www.predix-ui.com/#/components/px-validation/) for more inf
         value: "right"
       },
       /**
+       * For columns of `type` "dropdown", this property sets button style according to button options.
+       */
+      dropdownButtonStyle:{
+        type: String
+      },
+      /**
        * For columns of `type` "dropdown", this property dictates which options should be available in the dropdown.
        */
       dropdownItems:{
         type: Array,
         value: function() {return [];},
         notify: true
+      },
+      /**
+       * For columns of `type` "dropdown", this property toggles visibility of search field.
+       */
+      dropdownSearchMode:{
+        type: Boolean,
+        value: false
+      },
+      /**
+       * For columns of `type` "dropdown", this property toggles multiple selection mode.
+       */
+      dropdownMulti:{
+        type: Boolean,
+        value: false
       },
       /**
        * Whether the column should be hidden from view.

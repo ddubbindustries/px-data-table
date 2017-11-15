@@ -34,12 +34,13 @@
               class="px-dropdown-content"
               selected="{{cellValue}}"
               select-by="val"
-              display-value="Select..."
+              display-value="{{placeholder}}"
               on-px-dropdown-selection-changed="saveCell"
               allow-outside-scroll="true"
-              button-style="primary"
+              button-style="{{dropdownButtonStyle}}"
               items="{{dropdownItems}}"
-              search-mode
+              search-mode="{{dropdownSearchMode}}"
+              multi="{{dropdownMulti}}"
               disable-clear>
             </px-dropdown>
           </span>
@@ -126,11 +127,23 @@
           type: Boolean,
           value: false
         },
+        dropdownButtonStyle:{
+          type: String,
+          value: 'bare'
+        },
         dropdownItems:{
           type: Array,
           value: function(){return [];},
           notify: true,
           observer: '_setDropdownItem'
+        },
+        dropdownSearchMode:{
+          type: Boolean,
+          value: false
+        },
+        dropdownMulti:{
+          type: Boolean,
+          value: false
         },
         cellSelected:{
           type: Boolean,
